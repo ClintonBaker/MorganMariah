@@ -1,0 +1,5 @@
+sections:
+- {name: About, folder: 'About'}
+- {name: Cats, folder: 'Cats'}
+- {name: Dogs, folder: 'Dogs'}
+- {name: Others, folder: 'ReptilesNCrawleyThingies'}
