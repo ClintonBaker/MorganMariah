@@ -1,7 +1,12 @@
-<div class="thumb-container">
+<div class="thumb-wrapper">
 {% for section in site.data.settings.sections %}
-	<div class='thumb' style='background-image: url(assets/img/{{section.folder}}/thumb.jpg)'>
-		{{ section.name }}
+	<div class="thumb-container">
+		<div class="thumb">
+			<div class='front' style='background-image: url(assets/img/{{section.folder}}/thumb.jpg)'></div>
+			<div class='back'>
+				<h1>{{ section.name }}</h1>
+			</div>
+		</div>
 	</div>
 {% endfor %}
 </div>

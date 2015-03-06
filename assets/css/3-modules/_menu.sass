@@ -1,13 +1,42 @@
-.thumb-container
+.thumb-wrapper
 	text-align: center
-	//+clearfix
 
-.thumb
+.thumb-container
+	-webkit-perspective: 500
+	perspective: 700
 	display: inline-block
-	background: no-repeat
-	background-size: cover
 	height: 350px
 	width: 35%
+	margin: 10px
+
+.thumb
+	position: relative
+	height: 100%
+	width: 100%
+	transition: all 1s ease
+	transform-style: preserve-3d
+
+	&:hover
+		transform: rotateX(180deg) rotateY(360deg)
+
+.front
+	background: no-repeat
+	background-size: cover
+
+.back
+	transform: rotateX(180deg)
+	background: #222
+
+.front, .back
+	position: absolute
+	top: 0
+	left: 0
+	height: 350px
+	width: 100%
+	backface-visibility: hidden
 	border-radius: 5px
-	margin: 10px 10px
-	//float: left
+
+	h1
+		line-height: 350px
+		letter-spacing: 2px
+		margin: 0
