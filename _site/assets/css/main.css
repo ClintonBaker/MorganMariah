@@ -146,8 +146,8 @@ body {
   font-family: 'Slabo 27px', serif; }
 
 body {
-  background-color: #606060;
-  color: #DF0000;
+  background: url(../img/background.jpg);
+  color: #1CAEE6;
   text-shadow: 2px; }
 
 #content {
@@ -184,15 +184,17 @@ span {
   height: 100%;
   width: 100%;
   transition: all 1s ease;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d; }
   .thumb:hover {
-    transform: rotateX(180deg) rotateY(360deg); }
+    -webkit-transform: rotateX(180deg) rotateY(360deg); }
 
 .front {
   background: no-repeat;
   background-size: cover; }
 
 .back {
+  -webkit-transform: rotateX(180deg);
   transform: rotateX(180deg);
   background: #222; }
 
@@ -202,6 +204,7 @@ span {
   left: 0;
   height: 350px;
   width: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 5px; }
   .front h1, .back h1 {
